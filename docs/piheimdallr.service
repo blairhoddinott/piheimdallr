@@ -1,0 +1,12 @@
+[Unit]
+Description=piHeimdallr
+AssertPathExists=/opt/piheimdallr
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/piheimdallr/main.py
+KillMode-process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
